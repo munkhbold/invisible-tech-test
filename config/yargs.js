@@ -1,6 +1,6 @@
 const argv = require('yargs')
     .options({
-        direccion: {
+        address: {
             alias: 'd',
             desc: 'City Address to get the weather',
             demand: true
