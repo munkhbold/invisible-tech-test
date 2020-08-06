@@ -3,14 +3,11 @@ const place = require('./location/location');
 const weather = require('./weather/weather');
 
 
-let getInfo = async(address) => {
+let getInfo = async (address) => {
 
     try {
-
         let coors = await place.getPlaceLatLng(address);        
         let temp = await weather.getWeather(coors.lat, coors.lng);
-
-
         return `The Weather in ${coors.address} is ${temp}°C`;
 
     } catch (e) {
